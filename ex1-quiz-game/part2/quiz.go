@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"math/rand"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -50,7 +51,7 @@ func main() {
 		fmt.Printf("What is the answer to: %s\n", quesAndAns[0])
 		var userInput string
 		fmt.Scanf("%s", &userInput)
-		if userInput == quesAndAns[1] {
+		if strings.TrimSpace(strings.ToLower(userInput)) == quesAndAns[1] {
 			correctQuestions++
 		}
 	}
